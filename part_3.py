@@ -1,18 +1,21 @@
-#3.2
+#3.3
 
 def get_coordinate():
     while True:
         try:
             coord = int(input("Please enter an x coordinate: "))
+
         except ValueError:
             print("Invalid coordinate")
             continue
         else:
-            break
-        return coord
-    
-    print(coord)
+            if coord > 100 or coord < -100:
+                print("Coordinate out of range")
 
+            else:
+                print(f"Coordinate is {coord} - within accepted range")
+                break
+    
 get_coordinate()
 #while True:
         #try:

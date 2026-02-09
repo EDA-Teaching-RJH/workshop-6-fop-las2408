@@ -1,4 +1,4 @@
-#4.1
+#4.2
 def sensor():
     travel_log = []
     while True:
@@ -15,5 +15,9 @@ def sensor():
                 travel_log.append(angle)
                 print("Path Stable. Moving Forward")
                 continue
+        
+    print("Mission Terminated")
+    print(f"Total steps taken: {len(travel_log)}")
+    print(travel_log)
 
 sensor()

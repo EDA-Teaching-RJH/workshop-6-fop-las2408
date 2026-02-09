@@ -1,9 +1,25 @@
-#2.1
+#3
 rover_status = {
     "Battery" : 100,
     "Heater" : "Off",
     "Camera" : "Standby"
 }
+
+mission_log = [
+    {
+        "Site": "Crater A", 
+        "Radiation": "Low", 
+        "Water": False
+    },
+    {
+        "Site": "Dune B", 
+        "Radiation": "High", 
+        "Water": True
+    }
+]
+
+for site in mission_log:
+    print(f"Site {site['Site']} has {site['Radiation']} radiation.")
 
 print(rover_status["Battery"])
 

@@ -24,20 +24,18 @@ for command in command_batch:
     
     if action == "MOVE":
         try:
-            # FIX 1: Wrap word[1] in int() so you can add it to the 0 in the dictionary
             rover_state["y"] += int(word[1])
             print("Successful command")
         except:
             print("Error: Invalid distance ignored")
 
-    elif action == "DIG": # FIX 2: Use 'elif' so it doesn't trigger the 'else' below
-        # FIX 3: Change command_batch to rover_state
+    elif action == "DIG":
         rover_state["samples"] += 1
 
-    elif action == "TURN": # FIX 2: Use 'elif' here as well
+    elif action == "TURN":
         print("Turning...")
     
-    # We added 'elif action == "RETURN": break' so the loop doesn't crash on the last command
+
     elif action == "RETURN":
         break
 
